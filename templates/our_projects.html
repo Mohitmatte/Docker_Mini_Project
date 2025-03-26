@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Listings</title>
+    <link rel="stylesheet" href="/static/css/styles3.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Featured Properties</h1>
+        </header>
+        
+        <main>
+            <div class="property-grid" id="propertyGrid">
+                <!-- Properties will be inserted here by JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <template id="property-card-template">
+        <div class="property-card">
+            <div class="property-image">
+                <img src="" alt="">
+                <button class="favorite-btn">
+                    <i data-lucide="heart"></i>
+                </button>
+                <div class="price-overlay">
+                    <h3></h3>
+                </div>
+            </div>
+            
+            <div class="property-content">
+                <h2 class="title"></h2>
+                <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <span></span>
+                </div>
+                
+                <p class="description"></p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <i data-lucide="bed-double"></i>
+                        <span></span>
+                    </div>
+                    <div class="feature">
+                        <i data-lucide="bath"></i>
+                        <span></span>
+                    </div>
+                    <div class="feature">
+                        <i data-lucide="square"></i>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <hr>
+                
+                <div class="agent-info">
+                    <h4></h4>
+                    <div class="contact">
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span></span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="/static/js/script1.js"></script>
+</body>
+</html>

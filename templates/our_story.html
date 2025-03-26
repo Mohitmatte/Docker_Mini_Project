@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Success Stories | Luxury Real Estate</title>
+    <link rel="stylesheet" href="/static/css/styles1.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="hero">
+        <h1>Our Success Stories</h1>
+        <p class="subtitle">Transforming visions into architectural masterpieces</p>
+    </div>
+
+    <main class="showcase">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000" alt="The Skyline Residences">
+                <div class="project-overlay">
+                    <span class="project-value">$75M</span>
+                    <span class="project-year">2024</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h2>The Skyline Residences</h2>
+                <p class="project-location"><i data-lucide="map-pin"></i> Downtown Manhattan</p>
+                <p class="project-description">A 45-story luxury condominium featuring smart home technology, panoramic views, and sustainable design. Winner of the 2024 Architectural Excellence Award.</p>
+                <div class="project-stats">
+                    <div><i data-lucide="home"></i> 120 Units</div>
+                    <div><i data-lucide="calendar"></i> 24 Months</div>
+                    <div><i data-lucide="award"></i> 3 Awards</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000" alt="Oceanfront Villas">
+                <div class="project-overlay">
+                    <span class="project-value">$45M</span>
+                    <span class="project-year">2023</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h2>Oceanfront Villas</h2>
+                <p class="project-location"><i data-lucide="map-pin"></i> Miami Beach</p>
+                <p class="project-description">Exclusive beachfront community featuring private pools, smart security systems, and direct beach access. Sold out within three months of launch.</p>
+                <div class="project-stats">
+                    <div><i data-lucide="home"></i> 24 Villas</div>
+                    <div><i data-lucide="calendar"></i> 18 Months</div>
+                    <div><i data-lucide="trending-up"></i> 100% Sold</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&q=80&w=2000" alt="Greenwood Heights">
+                <div class="project-overlay">
+                    <span class="project-value">$95M</span>
+                    <span class="project-year">2023</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h2>Greenwood Heights</h2>
+                <p class="project-location"><i data-lucide="map-pin"></i> Beverly Hills</p>
+                <p class="project-description">Eco-friendly luxury community with solar power, green roofs, and sustainable materials. LEED Platinum certified development.</p>
+                <div class="project-stats">
+                    <div><i data-lucide="home"></i> 85 Units</div>
+                    <div><i data-lucide="calendar"></i> 30 Months</div>
+                    <div><i data-lucide="leaf"></i> LEED Platinum</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=2000" alt="The Metropolitan">
+                <div class="project-overlay">
+                    <span class="project-value">$120M</span>
+                    <span class="project-year">2023</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h2>The Metropolitan</h2>
+                <p class="project-location"><i data-lucide="map-pin"></i> Chicago Loop</p>
+                <p class="project-description">Mixed-use development combining luxury residences, boutique offices, and high-end retail spaces. Features Chicago's largest private garden.</p>
+                <div class="project-stats">
+                    <div><i data-lucide="home"></i> 200 Units</div>
+                    <div><i data-lucide="calendar"></i> 36 Months</div>
+                    <div><i data-lucide="shopping-bag"></i> 15 Retail</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=2000" alt="Harbor View">
+                <div class="project-overlay">
+                    <span class="project-value">$85M</span>
+                    <span class="project-year">2022</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h2>Harbor View</h2>
+                <p class="project-location"><i data-lucide="map-pin"></i> San Francisco</p>
+                <p class="project-description">Waterfront luxury apartments with private marina access, rooftop lounges, and smart home integration throughout.</p>
+                <div class="project-stats">
+                    <div><i data-lucide="home"></i> 150 Units</div>
+                    <div><i data-lucide="calendar"></i> 28 Months</div>
+                    <div><i data-lucide="anchor"></i> 40 Berths</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            
+            // Intersection Observer for fade-in animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.project-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
